@@ -1,0 +1,1 @@
+![ELK](images/slides/elk/elk-complex.png)

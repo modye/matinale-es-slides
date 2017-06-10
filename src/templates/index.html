@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>ElasticSearch in depth</title>
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <!-- build:css({.,.tmp}) styles/main.css -->
+        <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">    
+        <link rel="stylesheet" href="theme.css" id="theme">
+        <link rel="stylesheet" href="bower_components/prismjs/themes/prism.css" data-noprefix />
+        <link rel="stylesheet" href="bower_components/prismjs/plugins/line-highlight/prism-line-highlight.css"/>
+
+        <!-- endbuild -->
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <div class="slides">
+           <% _.forEach(slides, function(slide) { %>
+                <% if (!_.isArray(slide)) { %>
+                    <%= section(slide, true) %>
+                <% } %>
+                <% if (_.isArray(slide)) { %>
+                    <section>
+                        <% _.forEach(slide, function(verticalslide) { %>
+                            <%= section(verticalslide) %>
+                        <% }); %>
+                    </section>
+                <% } %>
+            <% }); %>
+            </div>
+
+        </div>
+
+        <!-- build:js({., js}) scripts/vendor.js -->
+        <script src="bower_components/reveal.js/js/reveal.js"></script>
+        <script src="bower_components/reveal.js/lib/js/classList.js"></script>
+        <script src="bower_components/reveal.js/plugin/markdown/marked.js"></script>
+        <script src="bower_components/reveal.js/plugin/markdown/markdown.js"></script>
+        <script src="bower_components/prismjs/prism.js"></script>
+        <script src="bower_components/prismjs/plugins/line-highlight/prism-line-highlight.js"></script>
+        <script src="bower_components/reveal.js/plugin/zoom-js/zoom.js" async></script>
+        <script src="bower_components/reveal.js/plugin/notes/notes.js" async></script>
+        <!-- <script src="js/loadhtmlslides.js"></script> -->
+        <!-- endbuild -->
+
+        <script>
+
+          // Full list of configuration options available at:
+          // https://github.com/hakimel/reveal.js#configuration
+          Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+          });
+        </script>
+    </body>
+
+</html>

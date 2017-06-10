@@ -1,0 +1,9 @@
+  <% if (!_.isString(slide) && !_.isArray(slide) && _.isObject(slide)) { %>
+      <section class="<% if (isTitle) { %>page-title<% }%>"
+       data-background="<% if (isTitle) { %>#fff no-repeat url('images/slide-background-title.svg')<% } else { %>transparent no-repeat url('images/slide-background.svg')<% }%>"
+      <%= _.map(slide.attr, function (val, attr) {return attr + '="' + val + '"'}).join(' ')%> <% if (_.isString(slide.filename)) { %>data-<% if (slide.filename.indexOf('.html') !== -1) { %>html<% } else { %>markdown<% }%>="slides/<%= slide.filename %>"<% } %> ></section>
+  <% } %><% if (_.isString(slide)) { %>
+      <section class="<% if (isTitle) { %>page-title<% }%>"
+       data-background="<% if (isTitle) { %>#fff no-repeat url('images/slide-background-title.svg')<% } else { %>transparent no-repeat url('images/slide-background.svg')<% }%>"
+        data-<% if (slide.indexOf('.html') !== -1) { %>html<% } else { %>markdown<% }%>="slides/<%= slide %>"></section>
+  <% } %>
