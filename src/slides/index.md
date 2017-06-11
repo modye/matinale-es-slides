@@ -1,6 +1,6 @@
 # Matinale Elastic
 <div class="subtitle" >
-    <div>Demystify ElasticSearch - From ELK to Elastic Stack</div>
+    <div>Demystify ElasticSearch<br/>From ELK to Elastic Stack</div>
 </div>
 
 ![ElasticSearch](images/elasticsearch.png)

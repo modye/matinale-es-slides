@@ -5,13 +5,11 @@ POST music/artist/_mapping
     "artist": {
         "properties": {
             "name": {
-                "type": "string",
-                "index": "analyzed",
+                "type": "text",
                 "analyzer": "english"
             },
             "country" : {
-                "type": "string",
-                "index": "not_analyzed" 
+                "type": "keyword"
             }
         }
     }

@@ -7,7 +7,7 @@
 GET _analyze
 {
   "analyzer" : "english",
-  "text" : "Hi BreizhJug, What's up ?"
+  "text" : "Hi Zenika, What's up ?"
 }
 ```
 
@@ -17,6 +17,6 @@ GET /_analyze
 {
   "tokenizer" : "whitespace",
   "filter" : ["lowercase"],
-  "text" : "Hi BreizhJug ! What's up ?"
+  "text" : "Hi Zenika ! What's up ?"
 }
 ```

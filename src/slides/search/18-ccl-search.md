@@ -2,8 +2,8 @@
 
 ##### Full text search
 
-Request on **analyzed** fields with *match query* family
+Request on **analyzed/text** fields with *match query* family
 
 ##### Exact search (filter)
 
-Request on **not_analyzed** fields with *term query* family
+Request on **not_analyzed/keyword** fields with *term query* family

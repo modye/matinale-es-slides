@@ -20,10 +20,10 @@ GET music/album/_mapping
 	 "album": {
 	    "properties": {
 	       "artist": {
-	          "type": "string"
+	          "type": "text"
 	       },
 	       "description": {
-	          "type": "string"
+	          "type": "text"
 	       }
 	    }
 	 }
