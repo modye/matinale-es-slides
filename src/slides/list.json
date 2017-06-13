@@ -46,6 +46,12 @@
       "search/21-multi-field-request.md"
     ],
     [
+      "aggs/01-aggs.md",
+      "aggs/02-aggs-desc.md",
+      "aggs/03-aggs-ccl.md",
+      "aggs/04-nested.md"
+    ],
+    [
       "elk/01-elk.md",
       "elk/02-elk-simple.md",
       "elk/03-elk-complex.md",
