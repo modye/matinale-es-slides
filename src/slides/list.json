@@ -55,7 +55,8 @@
       "elk/01-elk.md",
       "elk/02-elk-simple.md",
       "elk/03-elk-complex.md",
-      "elk/04-demo.md"
+      "elk/05-belk-simple.md",
+      "elk/06-beats.md"
     ],
     [
       "ccl/01-box.md",
